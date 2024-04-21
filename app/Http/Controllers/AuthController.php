@@ -84,7 +84,6 @@ class AuthController extends Controller
         if (method_exists($this, 'redirectTo')) {
             return $this->redirectTo();
         }
-        // dd('sedf');
         return property_exists($this, 'redirectTo') ? $this->redirectTo : route('admin.dashboard');
     }
 
