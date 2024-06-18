@@ -6,24 +6,26 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 95vh;
 }
 
 .heading-wrapper{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .heading-wrapper h1{
-  font-size: 40px;
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #57585A;
+  color: black;
+  font-weight: 400;
 }
 form{
   width:30%;
 }
 label{
   font-size: 16px;
-  font-weight: 600;
-  color: #57585A;
+  color: black;
 }
 .form-group{
   display: flex;
@@ -37,12 +39,10 @@ label{
 
 .flex-col input{
   font-size: 15px;
-  height: 35px;
+ padding: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #2da5aa;
   outline: none;
-  text-indent: 15px;
-  width: 100%;
 }
 .flex-row{
   flex-direction: row;
@@ -51,14 +51,15 @@ label{
   align-items: center;
   gap: 10px;
 }
-.flex-row button{
-  padding: 6px 30px;
+.flex-col button{
+  padding: 10px;
   cursor: pointer;
-  background-color: black;
+ background-color: #2da5aa;
   border: none;
   color: white;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 .flex-row button:hover{
   border: none;
@@ -66,7 +67,9 @@ label{
 }
 .validation-error{
   color: red;
+  font-size: 12px;
 }
-.flex-row a{
+.flex-col a{
   color: #01ACF1;
+  margin-top: 10px;
 }

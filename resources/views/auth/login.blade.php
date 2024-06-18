@@ -13,15 +13,15 @@
   <section>
     <div class="login-container">
       <div class="heading-wrapper">
-        <img src="https://logowik.com/content/uploads/images/hilton-hotels-resorts4207.jpg" style="width: 300px; height:150px;" alt="">
-        <h1>College Project</h1>
+        <img src="{{asset('logo/logoImage.jpeg')}}" style="height:75px;" alt="logo">
+        <h1>Login to continue</h1>
       </div>
       <form action="{{route('loginProcess')}}" method="post">
         @csrf
         <div class="form-group">
           <div class="form-group flex-col">
             <label for="">Username:</label>
-            <input type="text" name="username">
+            <input type="text" name="username" placeholder="Enter your username...">
             @error('username')
             <p class="validation-error">
               {{$message}}
@@ -30,7 +30,7 @@
           </div>
           <div class="form-group flex-col">
             <label for="">Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Enter the password...">
             @error('password')
             <p class="validation-error">
               {{$message}}
@@ -38,7 +38,7 @@
             @enderror
           </div>
 
-          <div class="form-group flex-row">
+          <div class="form-group flex-col">
             <button type="submit">Login</button>
             <a href="">Forget Password?</a>
           </div>
