@@ -1,7 +1,55 @@
 <aside class="sidebar">
-  <div class="sidebar-wrapper">
-    <div class="logo">
-      <img src="{{ asset('logo/logoImage.jpeg') }}" style="width:100%; height: 120px;" alt="logo">
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <img src="{{ asset('images/pms.png') }}" style="width:80%; height: 100px;margin-top:-12px;" alt="logo">
+        </div>
+        <div class="sidebar-nav-wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{route('admin.dashboard')}}" class="{{ request()->is('admin/dashboard') ? 'active' : '' }}"><i class="fa fa-home"></i>Dashboard</a>
+                    </li>
+
+                    <li class="{{request()->is('admin/country/create') ||  request()->is('admin/country/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-photo"></i>Country <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.country.create')}}" class="{{ request()->is('admin/country/create') ? 'active' : '' }}">Create</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="{{request()->is('admin/user/create') ||  request()->is('admin/user/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-user"></i>All Users <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.user.create')}}" class="{{ request()->is('admin/user/create') ? 'active' : '' }}">Create</a></li>
+                            <li><a href="{{route('admin.user')}}" class="{{ request()->is('admin/user') ? 'active' : '' }}">View</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="{{request()->is('admin/permission/create') ||  request()->is('admin/permission/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-user"></i>All Permissions <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.permission.create')}}" class="{{ request()->is('admin/permission/create') ? 'active' : '' }}">Create</a></li>
+                            <li><a href="{{route('admin.permission')}}" class="{{ request()->is('admin/permission') ? 'active' : '' }}">View</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="{{request()->is('admin/role/create') ||  request()->is('admin/role/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-user"></i>All Roles <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.role.create')}}" class="{{ request()->is('admin/role/create') ? 'active' : '' }}">Create</a></li>
+                            <li><a href="{{route('admin.role')}}" class="{{ request()->is('admin/role') ? 'active' : '' }}">View</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
 </aside>

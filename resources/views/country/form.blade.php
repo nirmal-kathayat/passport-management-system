@@ -1,5 +1,5 @@
-<!-- <h1>Dashboard</h1> -->
 @extends('layouts.default')
-@section('title','Dashboard')
+@section('title','Country')
 @section('content')
+<h1>test country</h1>
 @endsection

@@ -17,6 +17,7 @@
   </div>
   <div class="profile-dropdown">
     <ul>
+      <li><a href="">Change Password</a></li>
       <li><a href="{{route('logout')}}">Logout</a></li>
     </ul>
   </div>

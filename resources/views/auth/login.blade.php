@@ -13,7 +13,7 @@
   <section>
     <div class="login-container">
       <div class="heading-wrapper">
-        <img src="{{asset('logo/logoImage.jpeg')}}" style="height:75px;" alt="logo">
+        <img src="{{asset('images/pms.png')}}" style="height:100px;" alt="logo">
         <h1>Login to continue</h1>
       </div>
       <form action="{{route('loginProcess')}}" method="post">
