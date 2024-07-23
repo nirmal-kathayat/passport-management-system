@@ -119,7 +119,7 @@ class UserController extends Controller
             $this->repo->getUserByEmail($email);
             // Generate the password reset link
             $link = url('/') . '/password/reset/' . $token;
-            dd($link);
+            // dd($link);
             // Mail::to($user->email)->send(new ForgotPasswordEmail($link));
             // return true;
         } catch (Exception $e) {

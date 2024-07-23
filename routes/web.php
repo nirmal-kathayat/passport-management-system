@@ -18,7 +18,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
     Route::group(['prefix' => 'country'], function () {
+        Route::get('/', [CountryController::class, 'index'])->name('admin.country');
         Route::get('/create', [CountryController::class, 'create'])->name('admin.country.create');
+        Route::post('/store', [CountryController::class, 'store'])->name('admin.country.store');
+        Route::get('/edit/{id}', [CountryController::class, 'edit'])->name('admin.country.edit');
+        Route::put('/edit/{id}', [CountryController::class, 'update'])->name('admin.country.update');
+        Route::get('/delete/{id}', [CountryController::class, 'delete'])->name('admin.country.delete');
     });
 
     // permission
