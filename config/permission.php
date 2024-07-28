@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-return[
-	"without" =>[
+return [
+	"without" => [
 		'login',
 		'loginProcess',
 		'logout'
 	],
-	"allow" =>[
+	"allow" => [
 		"login",
 		"logout",
 		"admin.dashboard",
@@ -35,8 +35,14 @@ return[
 		"admin.country.edit",
 		"admin.country.update",
 		"admin.country.delete",
+		"admin.position",
+		"admin.position.create",
+		"admin.position.store",
+		"admin.position.edit",
+		"admin.position.update",
+		"admin.position.delete",
 	],
 	'guard' => 'admin',
-	"guest_redirect" =>'login',
+	"guest_redirect" => 'login',
 	"basePrefix" => 'admin'
 ];

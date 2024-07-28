@@ -16,6 +16,19 @@
 
                             <li><a href="{{route('admin.country.create')}}" class="{{ request()->is('admin/country/create') ? 'active' : '' }}">Create</a></li>
 
+                            <li><a href="{{route('admin.country')}}" class="{{ request()->is('admin/country') ? 'active' : '' }}">View</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="{{request()->is('admin/position/create') ||  request()->is('admin/position/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-list"></i>Position <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.position.create')}}" class="{{ request()->is('admin/position/create') ? 'active' : '' }}">Create</a></li>
+
+                            <li><a href="{{route('admin.position')}}" class="{{ request()->is('admin/position') ? 'active' : '' }}">View</a></li>
+
                         </ul>
                     </li>
 

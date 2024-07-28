@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JobPositionController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -24,6 +25,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit/{id}', [CountryController::class, 'edit'])->name('admin.country.edit');
         Route::put('/edit/{id}', [CountryController::class, 'update'])->name('admin.country.update');
         Route::get('/delete/{id}', [CountryController::class, 'delete'])->name('admin.country.delete');
+    });
+
+    // job position
+    Route::group(['prefix' => 'position'], function () {
+        Route::get('/', [JobPositionController::class, 'index'])->name('admin.position');
+        Route::get('/create', [JobPositionController::class, 'create'])->name('admin.position.create');
+        Route::post('/store', [JobPositionController::class, 'store'])->name('admin.position.store');
+        Route::get('/edit/{id}', [JobPositionController::class, 'edit'])->name('admin.position.edit');
+        Route::put('/edit/{id}', [JobPositionController::class, 'update'])->name('admin.position.update');
+        Route::get('/delete/{id}', [JobPositionController::class, 'delete'])->name('admin.position.delete');
     });
 
     // permission
