@@ -12,6 +12,15 @@ class CountryRepository
         $this->query = $query;
     }
 
+    public function getCountry()
+    {
+        $query = $this->query;
+        $query =    $query
+            ->select('id', 'title', 'created_at')
+            ->orderBy('title', 'asc')
+            ->get();
+        return $query;
+    }
     public function dataTable()
     {
         return $this->query

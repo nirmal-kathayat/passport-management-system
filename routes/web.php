@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DemandController;
 use App\Http\Controllers\JobPositionController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
@@ -37,6 +38,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/delete/{id}', [JobPositionController::class, 'delete'])->name('admin.position.delete');
     });
 
+    // demands
+    Route::group(['prefix'=>'demand'],function(){
+        Route::get('/',[DemandController::class,'index'])->name('admin.demand');
+        Route::get('/create',[DemandController::class,'create'])->name('admin.demand.create');
+        Route::post('/store',[DemandController::class,'store'])->name('admin.demand.store');
+        Route::get('/edit/{id}',[DemandController::class,'edit'])->name('admin.demand.edit');
+        Route::put('/edit/{id}',[DemandController::class,'update'])->name('admin.demand.update');
+        Route::get('/delete/{id}',[DemandController::class,'delete'])->name('admin.demand.delete');
+    });
     // permission
     Route::group(['prefix' => 'permission'], function () {
         Route::get('/', [PermissionController::class, 'index'])->name('admin.permission');

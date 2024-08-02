@@ -32,6 +32,17 @@
                         </ul>
                     </li>
 
+                    <li class="{{request()->is('admin/demand/create') ||  request()->is('admin/demand/create') ? 'open' : '' }}">
+                        <p><i class="fa fa-users"></i>Demand <i class="fa fa-chevron-right"></i></p>
+                        <ul class="side-dropdown">
+
+                            <li><a href="{{route('admin.demand.create')}}" class="{{ request()->is('admin/demand/create') ? 'active' : '' }}">Create</a></li>
+
+                            <li><a href="{{route('admin.demand')}}" class="{{ request()->is('admin/demand') ? 'active' : '' }}">View</a></li>
+
+                        </ul>
+                    </li>
+
                     <li class="{{request()->is('admin/user/create') ||  request()->is('admin/user/create') ? 'open' : '' }}">
                         <p><i class="fa fa-user"></i>All Users <i class="fa fa-chevron-right"></i></p>
                         <ul class="side-dropdown">
